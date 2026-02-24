@@ -25,6 +25,11 @@
     },
     "commands": [
       {
+        "command": "my-pets.addPet",
+        "title": "Add Pet",
+        "icon": "$(add)"
+      },
+      {
         "command": "my-pets.throwBall",
         "title": "Throw Ball",
         "icon": "$(rocket)"
@@ -38,14 +43,19 @@
     "menus": {
       "view/title": [
         {
-          "command": "my-pets.throwBall",
+          "command": "my-pets.addPet",
           "when": "view == dogView",
           "group": "navigation@1"
         },
         {
-          "command": "my-pets.clear",
+          "command": "my-pets.throwBall",
           "when": "view == dogView",
           "group": "navigation@2"
+        },
+        {
+          "command": "my-pets.clear",
+          "when": "view == dogView",
+          "group": "navigation@3"
         }
       ]
     }
